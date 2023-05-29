@@ -135,14 +135,14 @@
     </div>
   </nav>
 </header>
-<!-- On click add or remove "compact" class along with "expanded" and "secondary-menu-bar-show" class in the below div section  -->
+<!-- On click add or remove "compact" class along with "expanded" in "main-conainer-div" and "secondary-menu-bar-show" class in the below div section  -->
 <aside id="logo-sidebar"
   class="fixed left-0 z-40 w-410 pt-72 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-idr-primary-95"
   aria-label="Sidebar">
   <div class="h-full pb-16 overflow-y-auto bg-idr-primary-95 primary-menu-bar">
     <ul class="font-medium">
       <li class="menu-icon px-4 flex h-56 items-center">
-        <!-- Add Onclick event for toggle classes at aside and main div -->
+        <!-- Add Onclick event for toggle classes at "<aside>" and "main-conainer-div" and "secondary-menu-bar-show" -->
         <span class="block ml-auto cursor-pointer">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <mask id="mask0_53647_46169" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
@@ -443,6 +443,7 @@
       <!-- <li class="profile-list flex h-56 items-center px-4 hover:bg-idr-white">
       </li> -->
     </ul>
+    <!-- Collapse menu items in accordion format -->
     <div id="accordion-collapse" data-accordion="collapse">
       <h2 id="accordion-collapse-heading-1">
         <button type="button"
@@ -467,11 +468,14 @@
       </h2>
       <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
         <div class="">
+          <!-- collapsable items in sub-category ul -->
           <ul class="border-b border-idr-neutral-mod-80 sub-category-ul">
             <li class="flex h-56 items-center px-4 hover:bg-idr-white before-success">
               <span>Nature of Applicant</span>
             </li>
+            <!-- deeper level inside sub-menu-list ul -->
             <ul class="internal-sub-menu-list">
+              <!-- color as per classes "before-neutral", "before-success" and "before-progress" -->
               <li class="flex h-56 items-center px-4 hover:bg-idr-white before-progress">
                 <span>Nature of Applicant</span>
               </li>
@@ -556,7 +560,7 @@
   </div>
 </aside>
 <!-- On click add or remove "expanded" class -->
-<div class="pt-72 pr-8 pl-0 sm:ml-410 h-screen bg-idr-primary-95 secondary-menu-bar-show">
+<div class="pt-72 pr-8 pl-0 sm:ml-410 h-screen bg-idr-primary-95 secondary-menu-bar-show main-conainer-div">
   <div class="bg-idr-white h-full rounded-t-lg overflow-y-auto p-3">
 
   </div>
