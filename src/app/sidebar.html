@@ -1,0 +1,568 @@
+<header class="">
+    <nav class="bg-idr-primary-95 border-blue-100 text-textDefault fixed w-full z-50 px-4 h-72">
+      <div class="max-w-screen-xxl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="#" class="flex items-center">
+          <img src="./../assets/img/logo.png" class="h-8" alt="Logo" />
+          <!-- <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">IDR</span> -->
+        </a>
+        <button data-collapse-toggle="navbar-dropdown" type="button"
+          class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          aria-controls="navbar-dropdown" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+          <ul
+            class="border flex flex-col text-idr-neutral-mod-30 font-medium md:border-0 md:flex-row md:mt-0 md:p-0 mt-4 p-4 items-center">
+            <li class="mx-2">
+              <div class="relative hidden md:block">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                  <svg class="w-5 h-5 text-inputText" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="sr-only">Search icon</span>
+                </div>
+                <input type="text" id="search-navbar"
+                  class="h-[40px] block w-full p-2 pl-10 text-sm text-idr-neutral-mod-30 border border-white rounded-full bg-white"
+                  placeholder="Search..." />
+              </div>
+            </li>
+            <li class="mx-2">
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                class="bg-blue-900 text-white flex items-center justify-between md:w-auto px-4 py-2 rounded-lg w-full font-normal">
+                <span class="mr-3"><svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M14 5V2H6V5H4V0H16V5H14ZM16 9.5C16.2833 9.5 16.5208 9.40417 16.7125 9.2125C16.9042 9.02083 17 8.78333 17 8.5C17 8.21667 16.9042 7.97917 16.7125 7.7875C16.5208 7.59583 16.2833 7.5 16 7.5C15.7167 7.5 15.4792 7.59583 15.2875 7.7875C15.0958 7.97917 15 8.21667 15 8.5C15 8.78333 15.0958 9.02083 15.2875 9.2125C15.4792 9.40417 15.7167 9.5 16 9.5ZM14 16V12H6V16H14ZM16 18H4V14H0V8C0 7.15 0.291667 6.4375 0.875 5.8625C1.45833 5.2875 2.16667 5 3 5H17C17.85 5 18.5625 5.2875 19.1375 5.8625C19.7125 6.4375 20 7.15 20 8V14H16V18ZM18 12V8C18 7.71667 17.9042 7.47917 17.7125 7.2875C17.5208 7.09583 17.2833 7 17 7H3C2.71667 7 2.47917 7.09583 2.2875 7.2875C2.09583 7.47917 2 7.71667 2 8V12H4V10H16V12H18Z"
+                      fill="white" />
+                  </svg> </span>Reports
+                <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="white" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar"
+                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                  <li>
+                    <a href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                  </li>
+                </ul>
+                <div class="py-1">
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign
+                    out</a>
+                </div>
+              </div>
+            </li>
+            <li class="ml-2">
+              <a href="#" class="block py-2 pl-3 pr-4 rounded md:border-0 md:p-0 text-idr-neutral-20"><span><svg
+                    width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_53647_46182)">
+                      <mask id="mask0_53647_46182" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="12" y="12"
+                        width="24" height="24">
+                        <rect x="12" y="12" width="24" height="24" fill="#D9D9D9" />
+                      </mask>
+                      <g mask="url(#mask0_53647_46182)">
+                        <path
+                          d="M16 31V29H18V22C18 20.6167 18.4167 19.3875 19.25 18.3125C20.0833 17.2375 21.1667 16.5333 22.5 16.2V15.5C22.5 15.0833 22.6458 14.7292 22.9375 14.4375C23.2292 14.1458 23.5833 14 24 14C24.4167 14 24.7708 14.1458 25.0625 14.4375C25.3542 14.7292 25.5 15.0833 25.5 15.5V16.2C26.8333 16.5333 27.9167 17.2375 28.75 18.3125C29.5833 19.3875 30 20.6167 30 22V29H32V31H16ZM24 34C23.45 34 22.9792 33.8042 22.5875 33.4125C22.1958 33.0208 22 32.55 22 32H26C26 32.55 25.8042 33.0208 25.4125 33.4125C25.0208 33.8042 24.55 34 24 34ZM20 29H28V22C28 20.9 27.6083 19.9583 26.825 19.175C26.0417 18.3917 25.1 18 24 18C22.9 18 21.9583 18.3917 21.175 19.175C20.3917 19.9583 20 20.9 20 22V29Z"
+                          fill="#313033" />
+                      </g>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_53647_46182">
+                        <rect x="4" y="4" width="40" height="40" rx="20" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+  
+                </span></a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 rounded md:border-0 md:p-0 text-idr-neutral-20"><span>
+                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_53647_46183)">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M24 14C18.48 14 14 18.48 14 24C14 29.52 18.48 34 24 34C29.52 34 34 29.52 34 24C34 18.48 29.52 14 24 14ZM30.36 28.83C28.93 27.09 25.46 26.5 24 26.5C22.54 26.5 19.07 27.09 17.64 28.83C16.62 27.49 16 25.82 16 24C16 19.59 19.59 16 24 16C28.41 16 32 19.59 32 24C32 25.82 31.38 27.49 30.36 28.83ZM20.5 21.5C20.5 19.56 22.06 18 24 18C25.94 18 27.5 19.56 27.5 21.5C27.5 23.44 25.94 25 24 25C22.06 25 20.5 23.44 20.5 21.5Z"
+                        fill="#313033" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_53647_46183">
+                        <rect x="4" y="4" width="40" height="40" rx="20" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span></a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 rounded md:border-0 md:p-0 text-idr-neutral-20"><span>
+                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_53647_46184)">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M24 20C25.1 20 26 19.1 26 18C26 16.9 25.1 16 24 16C22.9 16 22 16.9 22 18C22 19.1 22.9 20 24 20ZM24 22C22.9 22 22 22.9 22 24C22 25.1 22.9 26 24 26C25.1 26 26 25.1 26 24C26 22.9 25.1 22 24 22ZM22 30C22 28.9 22.9 28 24 28C25.1 28 26 28.9 26 30C26 31.1 25.1 32 24 32C22.9 32 22 31.1 22 30Z"
+                        fill="#49454F" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_53647_46184">
+                        <rect x="4" y="4" width="40" height="40" rx="20" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- On click add or remove "compact" class along with "expanded" in "main-conainer-div" and "secondary-menu-bar-show" class in the below div section  -->
+  <aside id="logo-sidebar"
+    class="fixed left-0 z-40 w-410 pt-72 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-idr-primary-95"
+    aria-label="Sidebar">
+    <div class="h-full pb-16 overflow-y-auto bg-idr-primary-95 primary-menu-bar">
+      <ul class="font-medium">
+        <li class="menu-icon px-4 flex h-56 items-center">
+          <!-- Add Onclick event for toggle classes at "<aside>" and "main-conainer-div" and "secondary-menu-bar-show" -->
+          <span class="block ml-auto cursor-pointer">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="mask0_53647_46169" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                height="24">
+                <rect width="24" height="24" fill="#D9D9D9" />
+              </mask>
+              <g mask="url(#mask0_53647_46169)">
+                <path d="M3.4 22L2 20.6L8.6 14H4V12H12V20H10V15.4L3.4 22ZM12 12V4H14V8.6L20.6 2L22 3.4L15.4 10H20V12H12Z"
+                  fill="#313033" />
+              </g>
+            </svg>
+          </span>
+          <span class="toggle-button cursor-pointer hidden">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="mask0_53928_58552" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                height="24">
+                <rect width="24" height="24" fill="#D9D9D9" />
+              </mask>
+              <g mask="url(#mask0_53928_58552)">
+                <path d="M3 21V13H5V17.6L17.6 5H13V3H21V11H19V6.4L6.4 19H11V21H3Z" fill="#1C1B1F" />
+              </g>
+            </svg>
+  
+          </span>
+        </li>
+        <li class="profile-list flex h-56 items-center px-4 hover:bg-idr-white active">
+          <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg ">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="mask0_55335_16238" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                height="24">
+                <rect width="24" height="24" fill="#D9D9D9" />
+              </mask>
+              <g mask="url(#mask0_55335_16238)">
+                <path
+                  d="M4 23V21H20V23H4ZM4 3V1H20V3H4ZM12 13C12.8333 13 13.5417 12.7083 14.125 12.125C14.7083 11.5417 15 10.8333 15 10C15 9.16667 14.7083 8.45833 14.125 7.875C13.5417 7.29167 12.8333 7 12 7C11.1667 7 10.4583 7.29167 9.875 7.875C9.29167 8.45833 9 9.16667 9 10C9 10.8333 9.29167 11.5417 9.875 12.125C10.4583 12.7083 11.1667 13 12 13ZM4 20C3.45 20 2.97917 19.8042 2.5875 19.4125C2.19583 19.0208 2 18.55 2 18V6C2 5.45 2.19583 4.97917 2.5875 4.5875C2.97917 4.19583 3.45 4 4 4H20C20.55 4 21.0208 4.19583 21.4125 4.5875C21.8042 4.97917 22 5.45 22 6V18C22 18.55 21.8042 19.0208 21.4125 19.4125C21.0208 19.8042 20.55 20 20 20H4ZM5.75 18C6.5 17.0667 7.40833 16.3333 8.475 15.8C9.54167 15.2667 10.7167 15 12 15C13.2833 15 14.4583 15.2667 15.525 15.8C16.5917 16.3333 17.5 17.0667 18.25 18H20V6H4V18H5.75ZM8.7 18H15.3C14.8167 17.6667 14.2958 17.4167 13.7375 17.25C13.1792 17.0833 12.6 17 12 17C11.4 17 10.8208 17.0833 10.2625 17.25C9.70417 17.4167 9.18333 17.6667 8.7 18ZM12 11C11.7167 11 11.4792 10.9042 11.2875 10.7125C11.0958 10.5208 11 10.2833 11 10C11 9.71667 11.0958 9.47917 11.2875 9.2875C11.4792 9.09583 11.7167 9 12 9C12.2833 9 12.5208 9.09583 12.7125 9.2875C12.9042 9.47917 13 9.71667 13 10C13 10.2833 12.9042 10.5208 12.7125 10.7125C12.5208 10.9042 12.2833 11 12 11Z"
+                  fill="#313033" />
+              </g>
+            </svg>
+  
+            <span class="ml-3">
+              <p class="text-sm">Robert Marson Profile Name is current...</p>
+              <p>Change Profile</p>
+            </span>
+          </a>
+          <span class="ml-auto">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.70492 6L8.29492 7.41L12.8749 12L8.29492 16.59L9.70492 18L15.7049 12L9.70492 6Z"
+                fill="#CAC4D0" />
+            </svg>
+          </span>
+        </li>
+        <li class="title flex h-56 items-center border-t border-idr-neutral-mod-80 p-4">
+          <h3 class="text-base font-medium text-idr-neutral-mod-50">Investor</h3>
+        </li>
+        <li class="investor-list flex h-56 items-center p-4 hover:bg-idr-white">
+          <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="path-1-inside-1_55335_16358" fill="white">
+                <rect width="17" height="18" rx="1" />
+              </mask>
+              <rect width="17" height="18" rx="1" stroke="#313033" stroke-width="4"
+                mask="url(#path-1-inside-1_55335_16358)" />
+              <mask id="path-2-inside-2_55335_16358" fill="white">
+                <rect x="18" width="6" height="11" rx="1" />
+              </mask>
+              <rect x="18" width="6" height="11" rx="1" stroke="#313033" stroke-width="4"
+                mask="url(#path-2-inside-2_55335_16358)" />
+              <mask id="path-3-inside-3_55335_16358" fill="white">
+                <rect x="18" y="12" width="6" height="12" rx="1" />
+              </mask>
+              <rect x="18" y="12" width="6" height="12" rx="1" stroke="#313033" stroke-width="4"
+                mask="url(#path-3-inside-3_55335_16358)" />
+              <mask id="path-4-inside-4_55335_16358" fill="white">
+                <rect y="19" width="17" height="5" rx="1" />
+              </mask>
+              <rect y="19" width="17" height="5" rx="1" stroke="#313033" stroke-width="4"
+                mask="url(#path-4-inside-4_55335_16358)" />
+              <path d="M9.06934 4.04688V14H7.02539V4.04688H9.06934Z" fill="#313033" />
+            </svg>
+            <span class="ml-3">
+              Investor Dashboard
+            </span>
+          </a>
+          <span class="ml-auto">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.70492 6L8.29492 7.41L12.8749 12L8.29492 16.59L9.70492 18L15.7049 12L9.70492 6Z"
+                fill="#CAC4D0" />
+            </svg>
+          </span>
+        </li>
+        <li class="investor-list flex h-56 items-center p-4 hover:bg-idr-white">
+          <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="mask0_55335_16374" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                height="24">
+                <rect width="24" height="24" fill="#D9D9D9" />
+              </mask>
+              <g mask="url(#mask0_55335_16374)">
+                <path
+                  d="M10 12C8.9 12 7.95833 11.6083 7.175 10.825C6.39167 10.0417 6 9.1 6 8C6 6.9 6.39167 5.95833 7.175 5.175C7.95833 4.39167 8.9 4 10 4C11.1 4 12.0417 4.39167 12.825 5.175C13.6083 5.95833 14 6.9 14 8C14 9.1 13.6083 10.0417 12.825 10.825C12.0417 11.6083 11.1 12 10 12ZM2 20V17.2C2 16.65 2.14167 16.1333 2.425 15.65C2.70833 15.1667 3.1 14.8 3.6 14.55C4.45 14.1167 5.40833 13.75 6.475 13.45C7.54167 13.15 8.71667 13 10 13H10.35C10.45 13 10.55 13.0167 10.65 13.05C10.5167 13.35 10.4042 13.6625 10.3125 13.9875C10.2208 14.3125 10.15 14.65 10.1 15H10C8.81667 15 7.75417 15.15 6.8125 15.45C5.87083 15.75 5.1 16.05 4.5 16.35C4.35 16.4333 4.22917 16.55 4.1375 16.7C4.04583 16.85 4 17.0167 4 17.2V18H10.3C10.4 18.35 10.5333 18.6958 10.7 19.0375C10.8667 19.3792 11.05 19.7 11.25 20H2ZM16 21L15.7 19.5C15.5 19.4167 15.3125 19.3292 15.1375 19.2375C14.9625 19.1458 14.7833 19.0333 14.6 18.9L13.15 19.35L12.15 17.65L13.3 16.65C13.2667 16.4167 13.25 16.2 13.25 16C13.25 15.8 13.2667 15.5833 13.3 15.35L12.15 14.35L13.15 12.65L14.6 13.1C14.7833 12.9667 14.9625 12.8542 15.1375 12.7625C15.3125 12.6708 15.5 12.5833 15.7 12.5L16 11H18L18.3 12.5C18.5 12.5833 18.6875 12.675 18.8625 12.775C19.0375 12.875 19.2167 13 19.4 13.15L20.85 12.65L21.85 14.4L20.7 15.4C20.7333 15.6 20.75 15.8083 20.75 16.025C20.75 16.2417 20.7333 16.45 20.7 16.65L21.85 17.65L20.85 19.35L19.4 18.9C19.2167 19.0333 19.0375 19.1458 18.8625 19.2375C18.6875 19.3292 18.5 19.4167 18.3 19.5L18 21H16ZM17 18C17.55 18 18.0208 17.8042 18.4125 17.4125C18.8042 17.0208 19 16.55 19 16C19 15.45 18.8042 14.9792 18.4125 14.5875C18.0208 14.1958 17.55 14 17 14C16.45 14 15.9792 14.1958 15.5875 14.5875C15.1958 14.9792 15 15.45 15 16C15 16.55 15.1958 17.0208 15.5875 17.4125C15.9792 17.8042 16.45 18 17 18ZM10 10C10.55 10 11.0208 9.80417 11.4125 9.4125C11.8042 9.02083 12 8.55 12 8C12 7.45 11.8042 6.97917 11.4125 6.5875C11.0208 6.19583 10.55 6 10 6C9.45 6 8.97917 6.19583 8.5875 6.5875C8.19583 6.97917 8 7.45 8 8C8 8.55 8.19583 9.02083 8.5875 9.4125C8.97917 9.80417 9.45 10 10 10Z"
+                  fill="#313033" />
+              </g>
+            </svg>
+            <span class="ml-3">
+              KYC Profile Settings
+            </span>
+          </a>
+          <span class="ml-auto">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.70492 6L8.29492 7.41L12.8749 12L8.29492 16.59L9.70492 18L15.7049 12L9.70492 6Z"
+                fill="#CAC4D0" />
+            </svg>
+          </span>
+        </li>
+        <li class="investor-list flex h-56 items-center p-4 hover:bg-idr-white">
+          <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="mask0_55335_16387" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                height="24">
+                <rect width="24" height="24" fill="#D9D9D9" />
+              </mask>
+              <g mask="url(#mask0_55335_16387)">
+                <path
+                  d="M7.5 6C7.08333 6 6.72917 6.14583 6.4375 6.4375C6.14583 6.72917 6 7.08333 6 7.5C6 7.91667 6.14583 8.27083 6.4375 8.5625C6.72917 8.85417 7.08333 9 7.5 9C7.91667 9 8.27083 8.85417 8.5625 8.5625C8.85417 8.27083 9 7.91667 9 7.5C9 7.08333 8.85417 6.72917 8.5625 6.4375C8.27083 6.14583 7.91667 6 7.5 6ZM7.5 16C7.08333 16 6.72917 16.1458 6.4375 16.4375C6.14583 16.7292 6 17.0833 6 17.5C6 17.9167 6.14583 18.2708 6.4375 18.5625C6.72917 18.8542 7.08333 19 7.5 19C7.91667 19 8.27083 18.8542 8.5625 18.5625C8.85417 18.2708 9 17.9167 9 17.5C9 17.0833 8.85417 16.7292 8.5625 16.4375C8.27083 16.1458 7.91667 16 7.5 16ZM4 3H20C20.2833 3 20.5208 3.09583 20.7125 3.2875C20.9042 3.47917 21 3.71667 21 4V11C21 11.2833 20.9042 11.5208 20.7125 11.7125C20.5208 11.9042 20.2833 12 20 12H4C3.71667 12 3.47917 11.9042 3.2875 11.7125C3.09583 11.5208 3 11.2833 3 11V4C3 3.71667 3.09583 3.47917 3.2875 3.2875C3.47917 3.09583 3.71667 3 4 3ZM5 5V10H19V5H5ZM4 13H20C20.2833 13 20.5208 13.0958 20.7125 13.2875C20.9042 13.4792 21 13.7167 21 14V21C21 21.2833 20.9042 21.5208 20.7125 21.7125C20.5208 21.9042 20.2833 22 20 22H4C3.71667 22 3.47917 21.9042 3.2875 21.7125C3.09583 21.5208 3 21.2833 3 21V14C3 13.7167 3.09583 13.4792 3.2875 13.2875C3.47917 13.0958 3.71667 13 4 13ZM5 15V20H19V15H5Z"
+                  fill="#313033" />
+              </g>
+            </svg>
+            <span class="ml-3">
+              My Funds
+            </span>
+          </a>
+          <span class="ml-auto">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.70492 6L8.29492 7.41L12.8749 12L8.29492 16.59L9.70492 18L15.7049 12L9.70492 6Z"
+                fill="#CAC4D0" />
+            </svg>
+          </span>
+        </li>
+        <li class="title flex h-56 items-center border-t border-idr-neutral-mod-80 p-4">
+          <h3 class="text-base font-medium text-idr-neutral-mod-50">Partner</h3>
+        </li>
+        <li class="partner-list flex h-56 items-center p-4 hover:bg-idr-white">
+          <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="mask0_55335_16575" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                height="24">
+                <rect width="24" height="24" fill="#313033" />
+              </mask>
+              <g mask="url(#mask0_55335_16575)">
+                <path d="M2 21V19H22V21H2ZM3 18V11H6V18H3ZM8 18V6H11V18H8ZM13 18V9H16V18H13ZM18 18V3H21V18H18Z"
+                  fill="#313033" />
+              </g>
+            </svg>
+  
+            <span class="ml-3">
+              All Funds
+            </span>
+          </a>
+          <span class="ml-auto">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.70492 6L8.29492 7.41L12.8749 12L8.29492 16.59L9.70492 18L15.7049 12L9.70492 6Z"
+                fill="#CAC4D0" />
+            </svg>
+          </span>
+        </li>
+        <li class="partner-list flex h-56 items-center p-4 hover:bg-idr-white">
+          <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="path-1-inside-1_55335_16588" fill="white">
+                <rect width="17" height="18" rx="1" />
+              </mask>
+              <rect width="17" height="18" rx="1" stroke="#313033" stroke-width="4"
+                mask="url(#path-1-inside-1_55335_16588)" />
+              <mask id="path-2-inside-2_55335_16588" fill="white">
+                <rect x="18" width="6" height="11" rx="1" />
+              </mask>
+              <rect x="18" width="6" height="11" rx="1" stroke="#313033" stroke-width="4"
+                mask="url(#path-2-inside-2_55335_16588)" />
+              <mask id="path-3-inside-3_55335_16588" fill="white">
+                <rect x="18" y="12" width="6" height="12" rx="1" />
+              </mask>
+              <rect x="18" y="12" width="6" height="12" rx="1" stroke="#313033" stroke-width="4"
+                mask="url(#path-3-inside-3_55335_16588)" />
+              <mask id="path-4-inside-4_55335_16588" fill="white">
+                <rect y="19" width="17" height="5" rx="1" />
+              </mask>
+              <rect y="19" width="17" height="5" rx="1" stroke="#313033" stroke-width="4"
+                mask="url(#path-4-inside-4_55335_16588)" />
+              <path
+                d="M10.0703 11.3955C10.0703 11.2178 10.043 11.0583 9.98828 10.917C9.93815 10.7712 9.84245 10.639 9.70117 10.5205C9.5599 10.3975 9.36165 10.2767 9.10645 10.1582C8.85124 10.0397 8.52083 9.91667 8.11523 9.78906C7.66406 9.64323 7.23568 9.47917 6.83008 9.29688C6.42904 9.11458 6.07357 8.90267 5.76367 8.66113C5.45833 8.41504 5.2168 8.13021 5.03906 7.80664C4.86589 7.48307 4.7793 7.1071 4.7793 6.67871C4.7793 6.264 4.87044 5.88802 5.05273 5.55078C5.23503 5.20898 5.49023 4.91732 5.81836 4.67578C6.14648 4.42969 6.53385 4.24056 6.98047 4.1084C7.43164 3.97624 7.92611 3.91016 8.46387 3.91016C9.19759 3.91016 9.83789 4.04232 10.3848 4.30664C10.9316 4.57096 11.3555 4.93327 11.6562 5.39355C11.9616 5.85384 12.1143 6.38021 12.1143 6.97266H10.0771C10.0771 6.68099 10.0156 6.42578 9.89258 6.20703C9.77409 5.98372 9.5918 5.80827 9.3457 5.68066C9.10417 5.55306 8.79883 5.48926 8.42969 5.48926C8.07422 5.48926 7.77799 5.54395 7.54102 5.65332C7.30404 5.75814 7.1263 5.90169 7.00781 6.08398C6.88932 6.26172 6.83008 6.46224 6.83008 6.68555C6.83008 6.85417 6.87109 7.00684 6.95312 7.14355C7.03971 7.28027 7.16732 7.40788 7.33594 7.52637C7.50456 7.64486 7.71191 7.75651 7.95801 7.86133C8.2041 7.96615 8.48893 8.06868 8.8125 8.16895C9.35482 8.33301 9.83105 8.51758 10.2412 8.72266C10.6559 8.92773 11.0023 9.15788 11.2803 9.41309C11.5583 9.66829 11.7679 9.95768 11.9092 10.2812C12.0505 10.6048 12.1211 10.9717 12.1211 11.3818C12.1211 11.8148 12.0368 12.2021 11.8682 12.5439C11.6995 12.8857 11.4557 13.1751 11.1367 13.4121C10.8177 13.6491 10.4372 13.8291 9.99512 13.9521C9.55306 14.0752 9.05859 14.1367 8.51172 14.1367C8.01953 14.1367 7.53418 14.0729 7.05566 13.9453C6.57715 13.8132 6.14193 13.6149 5.75 13.3506C5.36263 13.0863 5.05273 12.749 4.82031 12.3389C4.58789 11.9287 4.47168 11.4434 4.47168 10.8828H6.5293C6.5293 11.1927 6.57715 11.4548 6.67285 11.6689C6.76855 11.8831 6.90299 12.0563 7.07617 12.1885C7.25391 12.3206 7.46354 12.4163 7.70508 12.4756C7.95117 12.5348 8.22005 12.5645 8.51172 12.5645C8.86719 12.5645 9.15885 12.5143 9.38672 12.4141C9.61914 12.3138 9.79004 12.1748 9.89941 11.9971C10.0133 11.8193 10.0703 11.6188 10.0703 11.3955Z"
+                fill="#313033" />
+            </svg>
+  
+            <span class="ml-3">
+              Subscription Dashboard
+            </span>
+          </a>
+          <span class="ml-auto">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.70492 6L8.29492 7.41L12.8749 12L8.29492 16.59L9.70492 18L15.7049 12L9.70492 6Z"
+                fill="#CAC4D0" />
+            </svg>
+          </span>
+        </li>
+        <li class="partner-list flex h-56 items-center p-4 hover:bg-idr-white">
+          <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="path-1-inside-1_55335_16604" fill="white">
+                <rect width="17" height="18" rx="1" />
+              </mask>
+              <rect width="17" height="18" rx="1" stroke="#313033" stroke-width="4"
+                mask="url(#path-1-inside-1_55335_16604)" />
+              <mask id="path-2-inside-2_55335_16604" fill="white">
+                <rect x="18" width="6" height="11" rx="1" />
+              </mask>
+              <rect x="18" width="6" height="11" rx="1" stroke="#313033" stroke-width="4"
+                mask="url(#path-2-inside-2_55335_16604)" />
+              <mask id="path-3-inside-3_55335_16604" fill="white">
+                <rect x="18" y="12" width="6" height="12" rx="1" />
+              </mask>
+              <rect x="18" y="12" width="6" height="12" rx="1" stroke="#313033" stroke-width="4"
+                mask="url(#path-3-inside-3_55335_16604)" />
+              <mask id="path-4-inside-4_55335_16604" fill="white">
+                <rect y="19" width="17" height="5" rx="1" />
+              </mask>
+              <rect y="19" width="17" height="5" rx="1" stroke="#313033" stroke-width="4"
+                mask="url(#path-4-inside-4_55335_16604)" />
+              <path
+                d="M6.93945 4.04688V14H4.88867V4.04688H6.93945ZM12.9004 4.04688L8.95605 8.96191L6.67969 11.4092L6.31055 9.46777L7.84863 7.3623L10.3848 4.04688H12.9004ZM10.5693 14L7.63672 9.39941L9.1543 8.12793L12.9961 14H10.5693Z"
+                fill="#313033" />
+            </svg>
+  
+            <span class="ml-3">
+              KYC Dashboard
+            </span>
+          </a>
+          <span class="ml-auto">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.70492 6L8.29492 7.41L12.8749 12L8.29492 16.59L9.70492 18L15.7049 12L9.70492 6Z"
+                fill="#CAC4D0" />
+            </svg>
+          </span>
+        </li>
+        <li class="partner-list flex h-56 items-center p-4 hover:bg-idr-white">
+          <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="path-1-inside-1_55335_16485" fill="white">
+                <rect width="17" height="18" rx="1" />
+              </mask>
+              <rect width="17" height="18" rx="1" stroke="#313033" stroke-width="4"
+                mask="url(#path-1-inside-1_55335_16485)" />
+              <mask id="path-2-inside-2_55335_16485" fill="white">
+                <rect x="18" width="6" height="11" rx="1" />
+              </mask>
+              <rect x="18" width="6" height="11" rx="1" stroke="#313033" stroke-width="4"
+                mask="url(#path-2-inside-2_55335_16485)" />
+              <mask id="path-3-inside-3_55335_16485" fill="white">
+                <rect x="18" y="12" width="6" height="12" rx="1" />
+              </mask>
+              <rect x="18" y="12" width="6" height="12" rx="1" stroke="#313033" stroke-width="4"
+                mask="url(#path-3-inside-3_55335_16485)" />
+              <mask id="path-4-inside-4_55335_16485" fill="white">
+                <rect y="19" width="17" height="5" rx="1" />
+              </mask>
+              <rect y="19" width="17" height="5" rx="1" stroke="#313033" stroke-width="4"
+                mask="url(#path-4-inside-4_55335_16485)" />
+              <path d="M9.33887 4.04688V14H7.29492V4.04688H9.33887ZM12.4014 4.04688V5.65332H4.28027V4.04688H12.4014Z"
+                fill="#313033" />
+            </svg>
+  
+            <span class="ml-3">
+              Tax Dashboard
+            </span>
+          </a>
+          <span class="ml-auto">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.70492 6L8.29492 7.41L12.8749 12L8.29492 16.59L9.70492 18L15.7049 12L9.70492 6Z"
+                fill="#CAC4D0" />
+            </svg>
+          </span>
+        </li>
+      </ul>
+      <footer
+        class="h-56 bg-idr-primary-95 absolute bottom-0 text-center left-0 right-0 text-idr-primary-10 text-md font-normal flex items-center justify-center">
+        <span class=""><a href="">IDR 2023</a> | <a href="">Privacy Policy</a> | <a href="">T&Cs</a></span>
+      </footer>
+    </div>
+    <!-- Toggle "secondary-menu-bar-show" if secondary menu exist -->
+    <div
+      class="h-full pb-16 overflow-y-auto bg-idr-primary-95 secondary-menu-bar w-full hidden secondary-menu-bar-show text-idr-neutral-20">
+      <ul class="secondary-ul">
+        <li class="menu-icon px-4 flex h-56 items-center sub-title">
+          <!-- Add Onclick event for toggle classes at aside and main div -->
+          <span class="text-lg">
+            Subscription Pack
+          </span>
+        </li>
+        <!-- <li class="profile-list flex h-56 items-center px-4 hover:bg-idr-white">
+        </li> -->
+      </ul>
+      <!-- Collapse menu items in accordion format -->
+      <div id="accordion-collapse" data-accordion="collapse">
+        <h2 id="accordion-collapse-heading-1">
+          <button type="button"
+            class="flex font-medium items-center justify-between text-left w-full h-56 p-4 bg-transparent hover:bg-idr-white  text-idr-neutral-20"
+            data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
+            aria-controls="accordion-collapse-body-1">
+            <p class="font-medium text-ellipsis overflow-hidden basis-3/4 whitespace-nowrap">Questionnaire</p>
+            <span class="flex items-center">
+              <span class="text-sm">5%</span>
+              <!-- <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg> -->
+              <svg data-accordion-icon class="w-6 h-6 shrink-0 rotate-180" width="24" height="25" class="w-6 h-6 shrink-0"
+                viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M7 10.8965L12 15.8965L17 10.8965H7Z" fill="#313033" clip-rule="evenodd" />
+              </svg>
+            </span>
+          </button>
+        </h2>
+        <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+          <div class="">
+            <!-- collapsable items in sub-category ul -->
+            <ul class="border-b border-idr-neutral-mod-80 sub-category-ul">
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-success">
+                <span>Nature of Applicant</span>
+              </li>
+              <!-- deeper level inside sub-menu-list ul -->
+              <ul class="internal-sub-menu-list">
+                <!-- color as per classes "before-neutral", "before-success" and "before-progress" -->
+                <li class="flex h-56 items-center px-4 hover:bg-idr-white before-progress">
+                  <span>Nature of Applicant</span>
+                </li>
+                <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                  <span>Tax Status - Entities</span>
+                </li>
+              </ul>
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                <span>Basic Information</span>
+              </li>
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                <span>Investor Status</span>
+              </li>
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                <span>Miscellaneous</span>
+              </li>
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                <span>Country Specific Requirements</span>
+              </li>
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                <span>Declaration</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <h2 id="accordion-collapse-heading-2">
+          <button type="button"
+            class="flex font-medium items-center justify-between text-left w-full h-56 p-4 bg-transparent hover:bg-idr-white text-idr-neutral-20"
+            data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
+            aria-controls="accordion-collapse-body-2">
+            <p class="font-medium text-ellipsis overflow-hidden basis-3/4 whitespace-nowrap">Documents</p>
+            <span class="flex items-center">
+              <span class="text-sm">0%</span>
+              <svg data-accordion-icon class="w-6 h-6 shrink-0" width="24" height="25" class="w-6 h-6 shrink-0"
+                viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M7 10.8965L12 15.8965L17 10.8965H7Z" fill="#313033" clip-rule="evenodd" />
+              </svg>
+            </span>
+          </button>
+        </h2>
+        <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+          <div class="">
+            <ul class="border-b border-idr-neutral-mod-80 sub-category-ul">
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-success">
+                <span>Nature of Applicant</span>
+              </li>
+              <ul class="internal-sub-menu-list">
+                <li class="flex h-56 items-center px-4 hover:bg-idr-white before-progress">
+                  <span>Nature of Applicant</span>
+                </li>
+                <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                  <span>Tax Status - Entities</span>
+                </li>
+              </ul>
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                <span>Basic Information</span>
+              </li>
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                <span>Investor Status</span>
+              </li>
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                <span>Miscellaneous</span>
+              </li>
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                <span>Country Specific Requirements</span>
+              </li>
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                <span>Declaration</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-idr-neutral-mod-80 pt-6 px-4 flex items-center justify-between">
+        <button class="border border-idr-primary-10 bg-idr-white p-2 text-sm uppercase text-idr-primary-10 rounded-lg"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 15V18H6V15H4V18C4 19.1 4.9 20 6 20H18C19.1 20 20 19.1 20 18V15H18ZM17 11L15.59 9.59L13 12.17V4H11V12.17L8.41 9.59L7 11L12 16L17 11Z" fill="#0E2B72"/>
+          </svg>
+          </button>
+        <button class="border border-idr-primary-10 bg-idr-white py-2.5 px-4 text-sm font-medium uppercase text-idr-primary-10 rounded-lg">SAVE & CLOSE</button>
+        <button class="border border-idr-primary-10 bg-idr-primary-10 py-2.5 px-4 text-sm font-medium	uppercase text-idr-white rounded-lg">FUND DETAILS</button>
+      </div>
+    </div>
+  </aside>
+  <!-- On click add or remove "expanded" class -->
+  <div class="pt-72 pr-8 pl-0 sm:ml-410 h-screen bg-idr-primary-95 secondary-menu-bar-show main-conainer-div">
+    <div class="bg-idr-white h-full rounded-t-lg overflow-y-auto p-3">
+  
+    </div>
+  </div>
+  

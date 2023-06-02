@@ -1,72 +1,325 @@
-$idr-primary-10: #0e2b72;
-$idr-primary-20: #264080;
-$idr-primary-30: #3e558e;
-$idr-primary-40: #566b9c;
-$idr-primary-50: #6e80aa;
-$idr-primary-60: #8695b8;
-$idr-primary-70: #9faac7;
-$idr-primary-80: #b4bdd3;
-$idr-primary-90: #cfd5e3;
-$idr-primary-95: #e7eaf1;
+$idr-core-blue: (
+  50: #e7eaf1,
+  100: #cfd5e3,
+  200: #b4bdd3,
+  300: #9faac7,
+  400: #8695b8,
+  500: #6e80aa,
+  600: #566b9c,
+  700: #3e558e,
+  800: #264080,
+  900: #0e2b72,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #fff,
+    600: #fff,
+    700: #fff,
+    800: #fff,
+    900: #fff,
+  ),
+);
 
-$idr-secondary-10: #32607a;
-$idr-secondary-20: #477088;
-$idr-secondary-30: #5b7f95;
-$idr-secondary-40: #708fa2;
-$idr-secondary-50: #849faf;
-$idr-secondary-60: #99afbd;
-$idr-secondary-70: #b2c7d1;
-$idr-secondary-80: #c6d5dd;
-$idr-secondary-90: #d9e3e8;
-$idr-secondary-95: #ecf1f4;
+$idr-core-grey: (
+  50: #ecf1f4,
+  100: #d9e3e8,
+  200: #c6d5dd,
+  300: #b2c7d1,
+  400: #99afbd,
+  500: #849faf,
+  600: #708fa2,
+  700: #5b7f95,
+  800: #477088,
+  900: #32607a,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #fff,
+    600: #fff,
+    700: #fff,
+    800: #fff,
+    900: #fff,
+  ),
+);
 
-$idr-tertiary-10: #382333;
-$idr-tertiary-20: #552d4a;
-$idr-tertiary-30: #653257;
-$idr-tertiary-40: #873a71;
-$idr-tertiary-50: #983d7f;
-$idr-tertiary-60: #ad6f9d;
-$idr-tertiary-70: #b988ad;
-$idr-tertiary-80: #c5a2bf;
-$idr-tertiary-90: #d3bfd3;
-$idr-tertiary-95: #e6e1e9;
+$idr-dark-blue: (
+  50: #184095,
+  100: #184095,
+  200: #184095,
+  300: #184095,
+  400: #184095,
+  500: #184095,
+  600: #184095,
+  700: #184095,
+  800: #184095,
+  900: #184095,
+  contrast: (
+    50: #fff,
+    100: #fff,
+    200: #fff,
+    300: #fff,
+    400: #fff,
+    500: #fff,
+    600: #fff,
+    700: #fff,
+    800: #fff,
+    900: #fff,
+  ),
+);
 
-$idr-error-10: #410e0b;
-$idr-error-20: #601410;
-$idr-error-30: #8c1d18;
-$idr-error-40: #b3261e;
-$idr-error-50: #dc362e;
-$idr-error-60: #e46962;
-$idr-error-70: #ec928e;
-$idr-error-80: #f2b8b5;
-$idr-error-90: #f9dedc;
-$idr-error-95: #fceeee;
+$idr-light-blue: (
+  50: #15bff0,
+  100: #15bff0,
+  200: #15bff0,
+  300: #15bff0,
+  400: #15bff0,
+  500: #15bff0,
+  600: #15bff0,
+  700: #15bff0,
+  800: #15bff0,
+  900: #15bff0,
+  contrast: (
+    50: #fff,
+    100: #fff,
+    200: #fff,
+    300: #fff,
+    400: #fff,
+    500: #fff,
+    600: #fff,
+    700: #fff,
+    800: #fff,
+    900: #fff,
+  ),
+);
 
-$idr-neutral-10: #1c1b1f;
-$idr-neutral-20: #313033;
-$idr-neutral-30: #484649;
-$idr-neutral-40: #605d62;
-$idr-neutral-50: #787579;
-$idr-neutral-60: #939094;
-$idr-neutral-70: #aeaaae;
-$idr-neutral-80: #c9c5ca;
-$idr-neutral-90: #e6e1e5;
-$idr-neutral-95: #f4eff4;
+$idr-purple: (
+  50: #9c3587,
+  100: #9c3587,
+  200: #9c3587,
+  300: #9c3587,
+  400: #9c3587,
+  500: #9c3587,
+  600: #9c3587,
+  700: #9c3587,
+  800: #9c3587,
+  900: #9c3587,
+  contrast: (
+    50: #fff,
+    100: #fff,
+    200: #fff,
+    300: #fff,
+    400: #fff,
+    500: #fff,
+    600: #fff,
+    700: #fff,
+    800: #fff,
+    900: #fff,
+  ),
+);
 
-$idr-neutral-mod-10: #1d1a22;
-$idr-neutral-mod-20: #322f37;
-$idr-neutral-mod-30: #49454f;
-$idr-neutral-mod-40: #605d66;
-$idr-neutral-mod-50: #79747e;
-$idr-neutral-mod-60: #938f99;
-$idr-neutral-mod-70: #aea9b4;
-$idr-neutral-mod-80: #cac4d0;
-$idr-neutral-mod-90: #e7e0ec;
-$idr-neutral-mod-95: #f5eefa;
+$idr-orange: (
+  50: #f99f38,
+  100: #f99f38,
+  200: #f99f38,
+  300: #f99f38,
+  400: #f99f38,
+  500: #f99f38,
+  600: #f99f38,
+  700: #f99f38,
+  800: #f99f38,
+  900: #f99f38,
+  contrast: (
+    50: #fff,
+    100: #fff,
+    200: #fff,
+    300: #fff,
+    400: #fff,
+    500: #fff,
+    600: #fff,
+    700: #fff,
+    800: #fff,
+    900: #fff,
+  ),
+);
 
-$idr-light: #fffbfe;
-$idr-black: #000000;
-$idr-white: #ffffff;
-$idr-green: #13A107;
-$idr-warning: #DCA926;
-$idr-warning-light: rgba(241, 200, 46, 0.5);
+$idr-gold: (
+  50: #eebc00,
+  100: #eebc00,
+  200: #eebc00,
+  300: #eebc00,
+  400: #eebc00,
+  500: #eebc00,
+  600: #eebc00,
+  700: #eebc00,
+  800: #eebc00,
+  900: #eebc00,
+  contrast: (
+    50: #fff,
+    100: #fff,
+    200: #fff,
+    300: #fff,
+    400: #fff,
+    500: #fff,
+    600: #fff,
+    700: #fff,
+    800: #fff,
+    900: #fff,
+  ),
+);
+
+$idr-dark-green: (
+  50: #004225,
+  100: #004225,
+  200: #004225,
+  300: #004225,
+  400: #004225,
+  500: #004225,
+  600: #004225,
+  700: #004225,
+  800: #004225,
+  900: #004225,
+  contrast: (
+    50: #fff,
+    100: #fff,
+    200: #fff,
+    300: #fff,
+    400: #fff,
+    500: #fff,
+    600: #fff,
+    700: #fff,
+    800: #fff,
+    900: #fff,
+  ),
+);
+
+$idr-light-green: (
+
+  50: #da3016,
+  100: #da3016,
+  200: #da3016,
+  300: #da3016,
+  400: #da3016,
+  500: #da3016,
+  600: #da3016,
+  700: #da3016,
+  800: #da3016,
+  900: #da3016,
+  contrast: (
+    50: #fff,
+    100: #fff,
+    200: #fff,
+    300: #fff,
+    400: #fff,
+    500: #fff,
+    600: #fff,
+    700: #fff,
+    800: #fff,
+    900: #fff,
+  ),
+);
+
+$idr-success: (
+  50: #00bb68,
+  100: #00bb68,
+  200: #00bb68,
+  300: #00bb68,
+  400: #00bb68,
+  500: #00bb68,
+  600: #00bb68,
+  700: #00bb68,
+  800: #00bb68,
+  900: #00bb68,
+  contrast: (
+    50: #fff,
+    100: #fff,
+    200: #fff,
+    300: #fff,
+    400: #fff,
+    500: #fff,
+    600: #fff,
+    700: #fff,
+    800: #fff,
+    900: #fff,
+  ),
+);
+
+$idr-warning: (
+  50: #f1c82e,
+  100: #f1c82e,
+  200: #f1c82e,
+  300: #f1c82e,
+  400: #f1c82e,
+  500: #f1c82e,
+  600: #f1c82e,
+  700: #f1c82e,
+  800: #f1c82e,
+  900: #f1c82e,
+  contrast: (
+    50: #fff,
+    100: #fff,
+    200: #fff,
+    300: #fff,
+    400: #fff,
+    500: #fff,
+    600: #fff,
+    700: #fff,
+    800: #fff,
+    900: #fff,
+  ),
+);
+
+$idr-error: (
+  50: #da3016,
+  100: #da3016,
+  200: #da3016,
+  300: #da3016,
+  400: #da3016,
+  500: #da3016,
+  600: #da3016,
+  700: #da3016,
+  800: #da3016,
+  900: #da3016,
+  contrast: (
+    50: #fff,
+    100: #fff,
+    200: #fff,
+    300: #fff,
+    400: #fff,
+    500: #fff,
+    600: #fff,
+    700: #fff,
+    800: #fff,
+    900: #fff,
+  ),
+);
+
+$idr-button: (
+  50: #184095,
+  100: #184095,
+  200: #184095,
+  300: #184095,
+  400: #184095,
+  500: #184095,
+  600: #184095,
+  700: #184095,
+  800: #184095,
+  900: #184095,
+  contrast: (
+    50: #fff,
+    100: #fff,
+    200: #fff,
+    300: #fff,
+    400: #fff,
+    500: #fff,
+    600: #fff,
+    700: #fff,
+    800: #fff,
+    900: #fff,
+  ),
+);
