@@ -44,66 +44,203 @@
 
 </div>
 <div class="grid grid-cols-12 grid-rows2">
-  <nav class="bg-idr-core-grey-100 col-start-1 col-span-2 min-h-screen">
-    <div class="flex row-reverse justify-end pr-4">
-      <button mat-icon-button *ngIf="isCollapsed; else elseblock" (click)="toggleCollapsed()">
-        <mat-icon svgIcon="expand-arrows" color="primary" class="minimize-icon"></mat-icon>
-      </button>
-      <ng-template #elseblock>
-        <button mat-icon-button (click)="toggleCollapsed()">
-          <mat-icon svgIcon="collapse-arrows" color="primary" class="minimize-icon"></mat-icon>
+  <!-- toggle  compact-navbar class inside the below division -->
+  <div class="col-start-1 h-screen col-span-3 relative">
+    <nav class="bg-idr-core-grey-100 h-full">
+      <div class="flex row-reverse justify-end pr-1">
+        <button mat-icon-button *ngIf="isCollapsed; else elseblock" (click)="toggleCollapsed()">
+          <mat-icon svgIcon="expand-arrows" color="primary" class=""></mat-icon>
         </button>
-      </ng-template>
-    </div>
+        <ng-template #elseblock>
+          <button mat-icon-button (click)="toggleCollapsed()">
+            <mat-icon svgIcon="collapse-arrows" color="primary" class=""></mat-icon>
+          </button>
+        </ng-template>
+      </div>
 
 
-    <!-- <idr-card title="Change profile" profileName="Robert Mason" routerLink="/profile/change-profile" (click)="setIsSelected(true)" [isSelected]="isChangeProfileSelected"></idr-card> -->
+      <!-- <idr-card title="Change profile" profileName="Robert Mason" routerLink="/profile/change-profile" (click)="setIsSelected(true)" [isSelected]="isChangeProfileSelected"></idr-card> -->
 
-    <div class="h-14  max-w-full hover:bg-white"
-      [ngClass]="isChangeProfileSelected ? 'bg-white border-l-4 border-solid border-l-idr-core-blue-900 pl-3': 'bg-idr-core-grey-100 pl-4'">
-      <div class="flex h-full gap-4 ">
-        <mat-icon class="self-center profile text-black" svgIcon="profile"
-          [ngClass]="isChangeProfileSelected ? 'text-idr-core-blue-900': ''"></mat-icon>
-        <div class="self-center flex flex-col w-full">
-          <label class="text-sm">Robert Mason</label>
-          <label class="text-titleSmall text-idr-core-blue-900 font-semibold">Change profile</label>
-        </div>
-        <div class="pr-4 self-center">
-          <mat-icon matSuffix class="self-center chevron text-idr-core-grey-600" svgIcon="chevron-left"></mat-icon>
+      <div class="h-14  max-w-full hover:bg-white"
+        [ngClass]="isChangeProfileSelected ? 'bg-white border-l-4 border-solid border-l-idr-core-blue-900 pl-3': 'bg-idr-core-grey-100 pl-4'">
+        <div class="flex h-full gap-4 ">
+          <mat-icon class="self-center profile text-black" svgIcon="profile"
+            [ngClass]="isChangeProfileSelected ? 'text-idr-core-blue-900': ''"></mat-icon>
+          <div class="self-center flex flex-col w-full list-label">
+            <label class="text-sm">Robert Mason</label>
+            <label class="text-titleSmall text-idr-core-blue-900 font-semibold">Change profile</label>
+          </div>
+          <div class="pr-4 self-center  list-arrow">
+            <mat-icon matSuffix class="self-center chevron text-idr-core-grey-600" svgIcon="chevron-left"></mat-icon>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- <idr-menu-section (click)="setIsSelected(false)"></idr-menu-section> -->
-    <div class="text-slate-600 text-titleSmall font-semibold pt-4 border-t-2 border-solid border-idr-core-grey-500"
-      *ngFor="let section of menu">
-      <label class="text-titleSmall font-semibold pl-4">
-        {{ section.sectionName }}
-      </label>
-      <!-- <idr-menu-item *ngFor="let item of section.menuItems" iconName="{{ item.iconName }}" title="{{ item.title }}" [link]="item.link"></idr-menu-item> -->
-      <span *ngFor="let item of section.menuItems">
-        <a>
-          <div
-            class="bg-idr-core-grey-100 text-black pl-4 h-14 hover:bg-white hover:text-idr-core-blue-900 font-normal hover:font-semibold hover:cursor-pointer">
-            <div class="flex h-full gap-4">
-              <mat-icon class="self-center profile hover:text-idr-core-blue-900"
-                svgIcon="{{ item.iconName }}"></mat-icon>
-              <div class="self-center flex flex-col w-full text-titleSmall">
-                {{ item.title }}
-              </div>
-              <div class="pr-4 self-center">
-                <mat-icon matSuffix class="self-center chevron text-idr-core-grey-600"
-                  svgIcon="chevron-left"></mat-icon>
+      <!-- <idr-menu-section (click)="setIsSelected(false)"></idr-menu-section> -->
+      <div class="text-slate-600 text-titleSmall font-semibold pt-4 border-t-2 border-solid border-idr-core-grey-500"
+        *ngFor="let section of menu">
+        <label class="text-titleSmall font-semibold pl-4 group-title">
+          {{ section.sectionName }}
+        </label>
+        <!-- <idr-menu-item *ngFor="let item of section.menuItems" iconName="{{ item.iconName }}" title="{{ item.title }}" [link]="item.link"></idr-menu-item> -->
+        <span *ngFor="let item of section.menuItems">
+          <a>
+            <div
+              class="bg-idr-core-grey-100 text-black pl-4 h-14 hover:bg-white hover:text-idr-core-blue-900 font-normal hover:font-semibold hover:cursor-pointer">
+              <div class="flex h-full gap-4">
+                <mat-icon class="self-center profile hover:text-idr-core-blue-900"
+                  svgIcon="{{ item.iconName }}"></mat-icon>
+                <div class="self-center flex flex-col w-full text-titleSmall  list-label">
+                  {{ item.title }}
+                </div>
+                <div class="pr-4 self-center  list-arrow">
+                  <mat-icon matSuffix class="self-center chevron text-idr-core-grey-600"
+                    svgIcon="chevron-left"></mat-icon>
+                </div>
               </div>
             </div>
+          </a>
+        </span>
+
+      </div>
+
+
+    </nav>
+
+<!-- Toggle secondary-navbar inside the div below if secondary menu exist -->
+    <div class="bg-idr-core-grey-100 hidden top-0">
+      <ul class="secondary-ul">
+        <li class="menu-icon px-4 flex h-56 items-center sub-title">
+          <!-- Add Onclick event for toggle classes at aside and main div -->
+          <span class="text-lg">
+            Subscription Pack
+          </span>
+        </li>
+        <!-- <li class="profile-list flex h-56 items-center px-4 hover:bg-idr-white">
+      </li> -->
+      </ul>
+      <div id="accordion-collapse" data-accordion="collapse">
+        <h2 id="accordion-collapse-heading-1">
+          <button type="button"
+            class="flex font-medium items-center justify-between text-left w-full h-56 p-4 bg-transparent hover:bg-idr-white  text-idr-neutral-20"
+            data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
+            aria-controls="accordion-collapse-body-1">
+            <p class="font-medium text-ellipsis overflow-hidden basis-3/4 whitespace-nowrap">Questionnaire</p>
+            <span class="flex items-center">
+              <span class="text-sm">5%</span>
+              <!-- <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg> -->
+              <svg data-accordion-icon class="w-6 h-6 shrink-0 rotate-180" width="24" height="25"
+                class="w-6 h-6 shrink-0" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M7 10.8965L12 15.8965L17 10.8965H7Z" fill="#313033" clip-rule="evenodd" />
+              </svg>
+            </span>
+          </button>
+        </h2>
+        <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+          <div class="">
+            <ul class="border-b border-idr-neutral-mod-80 sub-category-ul">
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-success">
+                <span>Nature of Applicant</span>
+              </li>
+              <ul class="internal-sub-menu-list">
+                <li class="flex h-56 items-center px-4 hover:bg-idr-white before-progress">
+                  <span>Nature of Applicant</span>
+                </li>
+                <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                  <span>Tax Status - Entities</span>
+                </li>
+              </ul>
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                <span>Basic Information</span>
+              </li>
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                <span>Investor Status</span>
+              </li>
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                <span>Miscellaneous</span>
+              </li>
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                <span>Country Specific Requirements</span>
+              </li>
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                <span>Declaration</span>
+              </li>
+            </ul>
           </div>
-        </a>
-      </span>
-
+        </div>
+        <h2 id="accordion-collapse-heading-2">
+          <button type="button"
+            class="flex font-medium items-center justify-between text-left w-full h-56 p-4 bg-transparent hover:bg-idr-white text-idr-neutral-20"
+            data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
+            aria-controls="accordion-collapse-body-2">
+            <p class="font-medium text-ellipsis overflow-hidden basis-3/4 whitespace-nowrap">Documents</p>
+            <span class="flex items-center">
+              <span class="text-sm">0%</span>
+              <svg data-accordion-icon class="w-6 h-6 shrink-0" width="24" height="25" class="w-6 h-6 shrink-0"
+                viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M7 10.8965L12 15.8965L17 10.8965H7Z" fill="#313033" clip-rule="evenodd" />
+              </svg>
+            </span>
+          </button>
+        </h2>
+        <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+          <div class="">
+            <ul class="border-b border-idr-neutral-mod-80 sub-category-ul">
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-success">
+                <span>Nature of Applicant</span>
+              </li>
+              <ul class="internal-sub-menu-list">
+                <li class="flex h-56 items-center px-4 hover:bg-idr-white before-progress">
+                  <span>Nature of Applicant</span>
+                </li>
+                <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                  <span>Tax Status - Entities</span>
+                </li>
+              </ul>
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                <span>Basic Information</span>
+              </li>
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                <span>Investor Status</span>
+              </li>
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                <span>Miscellaneous</span>
+              </li>
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                <span>Country Specific Requirements</span>
+              </li>
+              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
+                <span>Declaration</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-idr-neutral-mod-80 pt-6 px-4 flex items-center justify-between">
+        <button class="border border-idr-primary-10 bg-idr-white p-2 text-sm uppercase text-idr-primary-10 rounded-lg">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18 15V18H6V15H4V18C4 19.1 4.9 20 6 20H18C19.1 20 20 19.1 20 18V15H18ZM17 11L15.59 9.59L13 12.17V4H11V12.17L8.41 9.59L7 11L12 16L17 11Z"
+              fill="#0E2B72" />
+          </svg>
+        </button>
+        <button
+          class="border border-idr-primary-10 bg-idr-white py-2.5 px-4 text-sm font-medium uppercase text-idr-primary-10 rounded-lg">SAVE
+          & CLOSE</button>
+        <button
+          class="border border-idr-primary-10 bg-idr-primary-10 py-2.5 px-4 text-sm font-medium	uppercase text-idr-white rounded-lg">FUND
+          DETAILS</button>
+      </div>
     </div>
+  </div>
 
-  </nav>
-  <main class="col-start-3 col-span-full row-span-2 bg-idr-core-grey-100">
+  <!-- toggle custom-main-container if only primary sidebar is minimised -->
+  <main class="col-start-4 col-span-full row-span-2 bg-idr-core-grey-100">
     <div class="pl-8 pt-8 bg-white rounded-tl-md h-full">
       Lorem ipsum
     </div>

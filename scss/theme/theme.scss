@@ -1,6 +1,6 @@
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 @include mat.core();
-@import 'colors.palette.scss';
+@import "colors.palette.scss";
 
 //specify default, lighter, and darker color or shade
 $idr-primary: mat.define-palette($idr-core-blue, 900, 400);
@@ -20,18 +20,114 @@ $idr-theme: mat.define-light-theme(
 
 @include mat.all-component-themes($idr-theme);
 
-  $alternate-primary: mat.define-palette($idr-dark-green);
-  $alternate-accent: mat.define-palette($idr-gold);
-  $alternate-theme: mat.define-light-theme(
-    (
-      color: (
-        primary: $alternate-primary,
-        accent: $alternate-accent,
-      ),
-      density: -2,
-    )
-  );
+$alternate-primary: mat.define-palette($idr-dark-green);
+$alternate-accent: mat.define-palette($idr-gold);
+$alternate-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $alternate-primary,
+      accent: $alternate-accent,
+    ),
+    density: -2,
+  )
+);
 
 .alt-theme {
   @include mat.all-component-themes($alternate-theme);
+}
+
+// navbar collapse CSS
+.compact-navbar {
+  nav {
+    max-width: 56px;
+    border-right: 2px solid #849faf;
+    .group-title,
+    .list-label,
+    .list-arrow {
+      display: none;
+    }
+  }
+}
+
+// secondary navbar CSS
+.secondary-navbar {
+  display: block !important;
+  width: -webkit-fill-available;
+  position: absolute;
+  left: 56px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .secondary-ul {
+    li {
+      justify-content: start;
+      height: 56px;
+    }
+  }
+  .sub-category-ul {
+    list-style: none;
+    padding: 0;
+    .before-success {
+      &::before {
+        border: 2px solid #13a107;
+        background-color: rgba(19, 161, 7, 0.5);
+      }
+    }
+
+    .before-neutral {
+      &::before {
+        border: 2px solid #5b7f95;
+        background-color: transparent;
+      }
+    }
+
+    .before-progress {
+      &::before {
+        border: 2px solid #eebc00;
+        background-color: #f99f38;
+      }
+    }
+
+    li {
+      justify-content: start;
+      padding-left: 16px;
+      height: 56px;
+
+      &::before {
+        content: "";
+        height: 20px;
+        min-width: 20px;
+        border-radius: 50%;
+        border-color: #13a107;
+        display: inline-block;
+        margin-right: 16px;
+      }
+
+      span {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+
+    .internal-sub-menu-list {
+      li {
+        padding-left: 42px;
+      }
+    }
+  }
+}
+
+// additional custom height CSS
+.h-56 {
+  height: 56px;
+}
+
+// Custom Main conrainer CSS
+.custom-main-container {
+  position: absolute;
+  left: 56px;
+  height: 100%;
+  width: calc(100% - 56px);
 }
