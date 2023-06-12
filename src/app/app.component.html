@@ -1,8 +1,8 @@
 <header class="">
-  <nav class="bg-idr-primary-95 border-blue-100 text-textDefault fixed w-full z-50 px-4 h-72">
-    <div class="max-w-screen-xxl flex flex-wrap items-center justify-between mx-auto p-4">
+  <nav class="bg-idr-primary-95 text-textDefault fixed w-full z-50 px-4 h-72 shadow-sm">
+    <div class="max-w-screen-xxl flex flex-wrap items-center justify-between mx-auto px-4 h-72">
       <a href="#" class="flex items-center">
-        <img src="./../assets/img/logo.png" class="h-8" alt="Logo" />
+        <img src="./../assets/img/logo.png" class="" alt="Logo" />
         <!-- <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">IDR</span> -->
       </a>
       <button data-collapse-toggle="navbar-dropdown" type="button"
@@ -54,7 +54,7 @@
             <!-- Dropdown menu -->
             <div id="dropdownNavbar"
               class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-              <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+              <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                 <li>
                   <a href="#"
                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -70,7 +70,7 @@
               </ul>
               <div class="py-1">
                 <a href="#"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
                   out</a>
               </div>
             </div>
@@ -137,7 +137,7 @@
 </header>
 <!-- On click add or remove "compact" class along with "expanded" in "main-conainer-div" and "secondary-menu-bar-show" class in the below div section  -->
 <aside id="logo-sidebar"
-  class="fixed left-0 z-40 w-410 pt-72 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-idr-primary-95"
+  class="fixed left-0 z-40 w-410 pt-72 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-idr-primary-95 compact secondary-menu-bar-show"
   aria-label="Sidebar">
   <div class="h-full pb-16 overflow-y-auto bg-idr-primary-95 primary-menu-bar">
     <ul class="font-medium">
@@ -426,19 +426,29 @@
       </li>
     </ul>
     <footer
-      class="h-56 bg-idr-primary-95 absolute bottom-0 text-center left-0 right-0 text-idr-primary-10 text-md font-normal flex items-center justify-center">
+      class="text-sm h-56 bg-idr-primary-95 absolute bottom-0 text-center left-0 right-0 text-idr-primary-10 text-md font-normal flex items-center justify-center">
       <span class=""><a href="">IDR 2023</a> | <a href="">Privacy Policy</a> | <a href="">T&Cs</a></span>
     </footer>
   </div>
   <!-- Toggle "secondary-menu-bar-show" if secondary menu exist -->
   <div
-    class="h-full pb-16 overflow-y-auto bg-idr-primary-95 secondary-menu-bar w-full hidden secondary-menu-bar-show text-idr-neutral-20">
+    class="h-full overflow-y-auto bg-idr-primary-95 secondary-menu-bar w-full hidden text-idr-neutral-20 secondary-menu-bar-show">
     <ul class="secondary-ul">
       <li class="menu-icon px-4 flex h-56 items-center sub-title">
         <!-- Add Onclick event for toggle classes at aside and main div -->
         <span class="text-lg">
           Subscription Pack
         </span>
+      </li>
+      <div class="bg-idr-neutral-mod-80 h-1 mb-4 mx-3">
+        <div class="bg-idr-green h-1" style="width: 75%"></div>
+      </div>
+
+      <!-- <li> must have a padding px-4 for this internal list -->
+      <li class="px-4">
+        <!-- Banner component copy and give color through classes and add text-left, text-right or text-center as per requirement, default it is text-center -->
+        <div _ngcontent-kfu-c1="" class="border-2 border-idr-warning bg-idr-warning-light rounded-0 p-4 w-full text-left"><span
+            _ngcontent-kfu-c1="" class="text-base font-medium">Review Status: <b _ngcontent-kfu-c1="">Incomplete</b></span></div>
       </li>
       <!-- <li class="profile-list flex h-56 items-center px-4 hover:bg-idr-white">
       </li> -->
@@ -447,7 +457,7 @@
     <div id="accordion-collapse" data-accordion="collapse">
       <h2 id="accordion-collapse-heading-1">
         <button type="button"
-          class="flex font-medium items-center justify-between text-left w-full h-56 p-4 bg-transparent hover:bg-idr-white  text-idr-neutral-20"
+          class="flex font-medium items-center justify-between text-left w-full h-56 p-4 bg-transparent hover:bg-idr-white  text-idr-neutral-20  border-b border-idr-neutral-mod-80"
           data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
           aria-controls="accordion-collapse-body-1">
           <p class="font-medium text-ellipsis overflow-hidden basis-3/4 whitespace-nowrap">Questionnaire</p>
@@ -503,7 +513,7 @@
       </div>
       <h2 id="accordion-collapse-heading-2">
         <button type="button"
-          class="flex font-medium items-center justify-between text-left w-full h-56 p-4 bg-transparent hover:bg-idr-white text-idr-neutral-20"
+          class="flex font-medium items-center justify-between text-left w-full h-56 p-4 bg-transparent hover:bg-idr-white text-idr-neutral-20  border-b border-idr-neutral-mod-80"
           data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
           aria-controls="accordion-collapse-body-2">
           <p class="font-medium text-ellipsis overflow-hidden basis-3/4 whitespace-nowrap">Documents</p>
@@ -518,50 +528,244 @@
       </h2>
       <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
         <div class="">
-          <ul class="border-b border-idr-neutral-mod-80 sub-category-ul">
-            <li class="flex h-56 items-center px-4 hover:bg-idr-white before-success">
-              <span>Nature of Applicant</span>
-            </li>
-            <ul class="internal-sub-menu-list">
-              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-progress">
-                <span>Nature of Applicant</span>
-              </li>
-              <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
-                <span>Tax Status - Entities</span>
-              </li>
-            </ul>
-            <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
-              <span>Basic Information</span>
-            </li>
-            <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
-              <span>Investor Status</span>
-            </li>
-            <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
-              <span>Miscellaneous</span>
-            </li>
-            <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
-              <span>Country Specific Requirements</span>
-            </li>
-            <li class="flex h-56 items-center px-4 hover:bg-idr-white before-neutral">
-              <span>Declaration</span>
-            </li>
-          </ul>
+
+        </div>
+      </div>
+      <h2 id="accordion-collapse-heading-3">
+        <button type="button"
+          class="flex font-medium items-center justify-between text-left w-full h-56 p-4 bg-transparent hover:bg-idr-white text-idr-neutral-20  border-b border-idr-neutral-mod-80"
+          data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
+          aria-controls="accordion-collapse-body-2">
+          <p class="font-medium text-ellipsis overflow-hidden basis-3/4 whitespace-nowrap">Declaration</p>
+          <span class="flex items-center">
+            <span class="text-sm">0%</span>
+            <svg data-accordion-icon class="w-6 h-6 shrink-0" width="24" height="25" class="w-6 h-6 shrink-0"
+              viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M7 10.8965L12 15.8965L17 10.8965H7Z" fill="#313033" clip-rule="evenodd" />
+            </svg>
+          </span>
+        </button>
+      </h2>
+      <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
+        <div class="">
+
         </div>
       </div>
     </div>
     <div class="border-t border-idr-neutral-mod-80 pt-6 px-4 flex items-center justify-between">
-      <button class="border border-idr-primary-10 bg-idr-white p-2 text-sm uppercase text-idr-primary-10 rounded-lg"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M18 15V18H6V15H4V18C4 19.1 4.9 20 6 20H18C19.1 20 20 19.1 20 18V15H18ZM17 11L15.59 9.59L13 12.17V4H11V12.17L8.41 9.59L7 11L12 16L17 11Z" fill="#0E2B72"/>
+      <button class="border border-idr-primary-10 bg-idr-white p-2 text-sm uppercase text-idr-primary-10 rounded-lg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M18 15V18H6V15H4V18C4 19.1 4.9 20 6 20H18C19.1 20 20 19.1 20 18V15H18ZM17 11L15.59 9.59L13 12.17V4H11V12.17L8.41 9.59L7 11L12 16L17 11Z"
+            fill="#0E2B72" />
         </svg>
-        </button>
-      <button class="border border-idr-primary-10 bg-idr-white py-2.5 px-4 text-sm font-medium uppercase text-idr-primary-10 rounded-lg">SAVE & CLOSE</button>
-      <button class="border border-idr-primary-10 bg-idr-primary-10 py-2.5 px-4 text-sm font-medium	uppercase text-idr-white rounded-lg">FUND DETAILS</button>
+      </button>
+      <button
+        class="border border-idr-primary-10 bg-idr-white py-2.5 px-4 text-sm font-medium uppercase text-idr-primary-10 rounded-lg">SAVE
+        & CLOSE</button>
+      <button
+        class="border border-idr-primary-10 bg-idr-primary-10 py-2.5 px-4 text-sm font-medium	uppercase text-idr-white rounded-lg">FUND
+        DETAILS</button>
     </div>
   </div>
 </aside>
 <!-- On click add or remove "expanded" class -->
-<div class="pt-72 pr-8 pl-0 sm:ml-410 h-screen bg-idr-primary-95 secondary-menu-bar-show main-conainer-div">
-  <div class="bg-idr-white h-full rounded-t-lg overflow-y-auto p-3">
+<div
+  class="pt-72 pr-8 pl-0 sm:ml-410 h-screen bg-idr-primary-95 secondary-menu-bar-show main-conainer-div expanded secondary-menu-bar-show">
+  <div class="bg-idr-white h-full rounded-t-lg overflow-y-auto p-8">
+    <!-- Header Component -->
+    <h3 class="text-lg text-idr-neutral-20"><b>Questionnaire</b> | Profile Details</h3>
+
+    <!-- <HR> Component -->
+    <hr class="border-idr-neutral-20 my-8">
+
+    <!-- Status Component -->
+    <div class="border-2 border-idr-green bg-idr-green-light rounded-0 p-4 w-full mb-8">
+      <span class="text-base">Review Status: <b>Approved</b></span>
+    </div>
+
+    <!-- Internal Component Title -->
+    <h4 class="text-lg text-idr-neutral-20 mb-6">1. Basic Details</h4>
+
+    <!-- Input Elements -->
+    <!-- Input type: text active field -->
+    <div class="relative mb-6 w-1/2">
+      <input type="text" id="floating_outlined"
+        class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-idr-primary-40 focus:outline-none focus:ring-0 focus:border-idr-primary-40"
+        placeholder="e.g. Bruce Wayne" />
+      <label for="floating_outlined"
+        class="absolute text-sm text-idr-neutral-mod-30 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-idr-primary-40 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">1.1
+        Profile Display Name*</label>
+    </div>
+
+    <!-- Input type: text area active -->
+    <div class="relative mb-6 w-1/2">
+      <textarea for="floating_outlined_2" rows="4"
+        class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-idr-primary-40 focus:outline-none focus:ring-0 focus:border-idr-primary-40"
+        placeholder="Please enter your description"></textarea>
+      <label for="floating_outlined_2"
+        class="absolute text-sm text-idr-neutral-mod-30 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-idr-primary-40 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">1.2
+        Description</label>
+    </div>
+
+    <!-- Disabled input field -->
+    <div class="relative mb-6 w-1/2">
+      <input disabled type="text" id="floating_filled"
+        class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-idr-primary-40 focus:outline-none focus:ring-0 focus:border-idr-primary-40"
+        placeholder="brucewayne@batman.com" />
+      <label for="floating_filled"
+        class="absolute text-sm text-idr-neutral-mod-30 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-idr-primary-40 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Floating
+        filled</label>
+      <span>
+        <button data-tooltip-target="tooltip-default" type="button"
+          class="absolute inset-y-0 right-2.5 px-4 py-2 text-idr-neutral-20 bg-transparent"><svg width="20" height="20"
+            viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-idr-neutral-mod-70">
+            <path
+              d="M9 15H11V9H9V15ZM10 7C10.2833 7 10.5208 6.90417 10.7125 6.7125C10.9042 6.52083 11 6.28333 11 6C11 5.71667 10.9042 5.47917 10.7125 5.2875C10.5208 5.09583 10.2833 5 10 5C9.71667 5 9.47917 5.09583 9.2875 5.2875C9.09583 5.47917 9 5.71667 9 6C9 6.28333 9.09583 6.52083 9.2875 6.7125C9.47917 6.90417 9.71667 7 10 7ZM10 20C8.61667 20 7.31667 19.7375 6.1 19.2125C4.88333 18.6875 3.825 17.975 2.925 17.075C2.025 16.175 1.3125 15.1167 0.7875 13.9C0.2625 12.6833 0 11.3833 0 10C0 8.61667 0.2625 7.31667 0.7875 6.1C1.3125 4.88333 2.025 3.825 2.925 2.925C3.825 2.025 4.88333 1.3125 6.1 0.7875C7.31667 0.2625 8.61667 0 10 0C11.3833 0 12.6833 0.2625 13.9 0.7875C15.1167 1.3125 16.175 2.025 17.075 2.925C17.975 3.825 18.6875 4.88333 19.2125 6.1C19.7375 7.31667 20 8.61667 20 10C20 11.3833 19.7375 12.6833 19.2125 13.9C18.6875 15.1167 17.975 16.175 17.075 17.075C16.175 17.975 15.1167 18.6875 13.9 19.2125C12.6833 19.7375 11.3833 20 10 20ZM10 18C12.2333 18 14.125 17.225 15.675 15.675C17.225 14.125 18 12.2333 18 10C18 7.76667 17.225 5.875 15.675 4.325C14.125 2.775 12.2333 2 10 2C7.76667 2 5.875 2.775 4.325 4.325C2.775 5.875 2 7.76667 2 10C2 12.2333 2.775 14.125 4.325 15.675C5.875 17.225 7.76667 18 10 18Z"
+              fill="#aea9b4" />
+          </svg>
+        </button>
+        <div id="tooltip-default" role="tooltip"
+          class="absolute font-normal z-10 invisible inline-block w-64 p-2 text-sm font-medium text-idr-white transition-opacity duration-300 bg-idr-neutral-mod-30 rounded-lg shadow-sm opacity-0 tooltip">
+          This is a tooltip with additional text
+          to help a user answer the question.
+        </div>
+      </span>
+    </div>
+
+    <!-- Internal Component Title -->
+    <h4 class="text-lg text-idr-neutral-20 mb-6">2. Primary Registered Address</h4>
+
+
+    <!-- Input type: text active field with button search -->
+    <div class="relative mb-6 w-1/2">
+      <input type="text" id="floating_outlined"
+        class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-idr-primary-40 focus:outline-none focus:ring-0 focus:border-idr-primary-40"
+        placeholder="Search Address" />
+      <label for="floating_outlined"
+        class="absolute text-sm text-idr-neutral-mod-30 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-idr-primary-40 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">
+        Address Search</label>
+      <span>
+        <button type="button" class="absolute inset-y-0 right-2.5 px-4 py-2 bg-transparent text-idr-primary-40"><svg
+            width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M11.76 10.27L17.49 16L16 17.49L10.27 11.76C9.2 12.53 7.91 13 6.5 13C2.91 13 0 10.09 0 6.5C0 2.91 2.91 0 6.5 0C10.09 0 13 2.91 13 6.5C13 7.91 12.53 9.2 11.76 10.27ZM6.5 2C4.01 2 2 4.01 2 6.5C2 8.99 4.01 11 6.5 11C8.99 11 11 8.99 11 6.5C11 4.01 8.99 2 6.5 2Z"
+              fill="#566B9C" />
+          </svg>
+        </button>
+      </span>
+    </div>
+
+    <!-- Input type: text active field -->
+    <div class="relative mb-6 w-1/2">
+      <input type="text" id="floating_outlined"
+        class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-idr-primary-40 focus:outline-none focus:ring-0 focus:border-idr-primary-40"
+        placeholder="e.g. Greenwood No. 478" />
+      <label for="floating_outlined"
+        class="absolute text-sm text-idr-neutral-mod-30 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-idr-primary-40 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">2.1
+        Building Name and No.*</label>
+    </div>
+
+    <!-- Input type: text active field -->
+    <div class="relative mb-6 w-1/2">
+      <input type="text" id="floating_outlined"
+        class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-idr-primary-40 focus:outline-none focus:ring-0 focus:border-idr-primary-40"
+        placeholder="e.g. Floor 4 or PO 5399" />
+      <label for="floating_outlined"
+        class="absolute text-sm text-idr-neutral-mod-30 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-idr-primary-40 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">2.2
+        Floor Suite or PO Box*</label>
+    </div>
+
+    <!-- Input type: text active field -->
+    <div class="relative mb-6 w-1/2">
+      <input type="text" id="floating_outlined"
+        class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-idr-primary-40 focus:outline-none focus:ring-0 focus:border-idr-primary-40"
+        placeholder="e.g. Willow Avenue" />
+      <label for="floating_outlined"
+        class="absolute text-sm text-idr-neutral-mod-30 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-idr-primary-40 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">2.3
+        Street*</label>
+    </div>
+
+    <!-- Input type: text active field -->
+    <div class="relative mb-6 w-1/2">
+      <input type="text" id="floating_outlined"
+        class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-idr-primary-40 focus:outline-none focus:ring-0 focus:border-idr-primary-40"
+        placeholder="e.g. Paris" />
+      <label for="floating_outlined"
+        class="absolute text-sm text-idr-neutral-mod-30 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-idr-primary-40 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">2.4
+        City*</label>
+    </div>
+
+    <!-- Input type: text active field -->
+    <div class="relative mb-6 w-1/2">
+      <input type="text" id="floating_outlined"
+        class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-idr-primary-40 focus:outline-none focus:ring-0 focus:border-idr-primary-40"
+        placeholder="e.g. Île-de-France" />
+      <label for="floating_outlined"
+        class="absolute text-sm text-idr-neutral-mod-30 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-idr-primary-40 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">2.5
+        State or Region*</label>
+    </div>
+
+    <!-- Input type: text active field -->
+    <div class="relative mb-6 w-1/2">
+      <input type="text" id="floating_outlined"
+        class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-idr-primary-40 focus:outline-none focus:ring-0 focus:border-idr-primary-40"
+        placeholder="e.g. 0045" />
+      <label for="floating_outlined"
+        class="absolute text-sm text-idr-neutral-mod-30 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-idr-primary-40 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">2.6
+        Postal or ZIP Code*</label>
+    </div>
+
+    <!-- Input Select: text active field -->
+    <div class="relative mb-6 w-1/2">
+      <select id="floating_outlined"
+        class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-idr-primary-40 focus:outline-none focus:ring-0 focus:border-idr-primary-40">
+        <option selected>Please choose</option>
+        <option value="US">United States</option>
+        <option value="CA">Canada</option>
+        <option value="FR">France</option>
+        <option value="DE">Germany</option>
+      </select>
+      <!-- <input type="text" id="floating_outlined"
+        class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-idr-primary-40 focus:outline-none focus:ring-0 focus:border-idr-primary-40"
+        placeholder="Please Choose" /> -->
+      <label for="floating_outlined"
+        class="absolute text-sm text-idr-neutral-mod-30 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-idr-primary-40 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">2.7
+        Country*</label>
+    </div>
+
+    <!-- Input Radio: text active field -->
+    <div class="relative mb-6 w-1/2">
+      <label class="text-sm text-idr-neutral-mod-30">2.8 Do you have a secondary business address?</label>
+      <ul class="grid grid-cols-2 gap-x-5 my-4 max-w-fit">
+        <li class="relative">
+          <input class="sr-only peer text-idr-primary-10" type="radio" value="yes" name="answer" id="answer_yes">
+          <label
+            class="flex justify-center text-idr-primary-10 font-medium py-2.5	px-6 bg-white border border-idr-primary-10 rounded-lg cursor-pointer focus:outline-none hover:bg-idr-green-light hover:border-idr-green peer-checked:ring-idr-green peer-checked:ring-2 peer-checked:border-transparent peer-checked:bg-idr-green-light"
+            for="answer_yes">Yes</label>
+        </li>
+        <li class="relative">
+          <input class="sr-only peer text-idr-primary-10" type="radio" value="no" name="answer" id="answer_no">
+          <label
+            class="flex justify-center text-idr-primary-10 font-medium py-2.5	px-6 bg-white border border-idr-primary-10 rounded-lg cursor-pointer focus:outline-none hover:bg-idr-green-light hover:border-idr-green peer-checked:ring-idr-green peer-checked:ring-2 peer-checked:border-transparent peer-checked:bg-idr-green-light"
+            for="answer_no">No</label>
+        </li>
+      </ul>
+    </div>
+
+    <!-- <HR> Component -->
+    <hr class="border-idr-tertiary-90 my-8">
+
+    <div class=" flex space-x-2 justify-end">
+      <button
+        class="border border-idr-primary-10 bg-idr-white py-2.5 px-4 text-sm uppercase text-idr-primary-10 rounded-lg">Previous</button>
+      <button
+        class="border border-idr-primary-10 bg-idr-primary-10 py-2.5 px-4 text-sm uppercase text-idr-white rounded-lg">Save
+        Progress</button>
+      <button
+        class="border border-idr-tertiary-light bg-idr-tertiary-light py-2.5 px-4 text-sm uppercase text-idr-white rounded-lg">Save
+        & Continue</button>
+    </div>
 
   </div>
 </div>

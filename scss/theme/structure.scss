@@ -1,5 +1,30 @@
 @import "colors.palette";
 
+body {
+  letter-spacing: 0.15px;
+
+  ::-webkit-scrollbar {
+    width: 14px;
+    height: 20px;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background: $idr-primary-90;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $idr-primary-20;
+    border-radius: 10px;
+    border: 3px solid $idr-primary-90;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: $idr-primary-10;
+
+  }
+}
+
 .active {
   background-color: $idr-white;
 }
@@ -71,7 +96,7 @@ aside.secondary-menu-bar-show {
     .before-success {
       &::before {
         border: 2px solid #13a107;
-        background-color: rgba(19, 161, 7, 0.5);
+        background-color: $idr-green-light;
       }
     }
 
@@ -116,4 +141,8 @@ aside.secondary-menu-bar-show {
       }
     }
   }
+}
+
+.text-area {
+  height: 112px;
 }

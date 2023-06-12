@@ -106,8 +106,10 @@ module.exports = {
         "idr-black": "#000000",
         "idr-white": "#FFFFFF",
         "idr-green": "#13A107",
+        "idr-green-light": "#13a1074d",
         "idr-warning": "#DCA926",
         "idr-warning-light": "rgba(241, 200, 46, 0.5)",
+        "idr-tertiary-light": "#9C3587",
       },
       spacing: {
         410: "410px",
